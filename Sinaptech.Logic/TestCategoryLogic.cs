@@ -11,6 +11,7 @@ namespace Sinaptech.Logic
     public class TestCategoryLogic
     {
         private ITestCategoryRepository<TestCategory> _testCategories;
+      
         public TestCategoryLogic()
         {
             _testCategories = new TestCategoryRepository();

@@ -11,5 +11,7 @@ namespace Sinaptech.Db.Models
         public int Id { get; set; }
         public string CategoryName { get; set; }
         public string CategoryDescription { get; set; }
+
+        public virtual ICollection<LabTest> LabTests { get; set; }
     }
 }

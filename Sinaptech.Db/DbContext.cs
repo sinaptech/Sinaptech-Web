@@ -37,6 +37,8 @@ namespace Sinaptech.Db
             modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogins");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaims");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
+            modelBuilder.Entity<LabTest>().HasMany(c => c.TestCategories).WithMany(i => i.LabTests).Map(t => t.MapLeftKey("LabTestId").MapRightKey("TestCategoryId").ToTable("LabTestTestCategory"));
+            modelBuilder.Entity<LabTest>().HasOptional(p => p.LabTestPrice).WithRequired(p => p.LabTest);
         }
     }
 }

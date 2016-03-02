@@ -64,7 +64,9 @@
     <Compile Include="Models\TestCategory.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ILabTestRepository.cs" />
     <Compile Include="Repositories\ITestCategoryRepository.cs" />
+    <Compile Include="Repositories\LabTestRepository.cs" />
     <Compile Include="Repositories\TestCategoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
