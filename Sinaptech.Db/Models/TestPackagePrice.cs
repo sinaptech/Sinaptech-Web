@@ -15,6 +15,8 @@ namespace Sinaptech.Db.Models
 
         public DateTime FromDateTime { get; set; }
 
+
+// Ye TestPackagePrice hatman bayad TestPackage dashte bashe va faghatm yedune dashtebashe va ye TestPackage mitune Price nadashte bashe ya yedune dashte bashe
         [ForeignKey("TestPackage")]
         public int TestPackageId { get; set; }
 

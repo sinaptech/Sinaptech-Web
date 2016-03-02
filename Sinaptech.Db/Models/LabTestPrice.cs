@@ -15,6 +15,8 @@ namespace Sinaptech.Db.Models
 
         public DateTime FromDateTime { get; set; }
 
+        //in bayad betune null ham baseh yani aslan gheymat nadashte bashe
+        //ye LabTestPrice bayad hatman LabTest dashte bashe va yedune ham bashe vali ye LabTest mitune yeki ya hichi LabTestPrice dashte bashe
         [ForeignKey("LabTest")]
         public int LabTestId { get; set; }
 

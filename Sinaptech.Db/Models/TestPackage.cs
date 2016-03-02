@@ -14,7 +14,10 @@ namespace Sinaptech.Db.Models
        public string NameGen { get; set; }
        public string Description { get; set; }
 
+        // Ye TestPackagePrice hatman bayad TestPackage dashte bashe va faghatm yedune dashtebashe va ye TestPackage mitune Price nadashte bashe ya yedune dashte bashe
         public virtual TestPackagePrice TestPackagePrice { get; set; }
+
+        //ye TestPackage mitune n ta LabTest dashte bashe va ye LabTest mitune ozve n ta TestPackage bashe
        public virtual ICollection<LabTest> LabTests { get; set; }
     }
 }

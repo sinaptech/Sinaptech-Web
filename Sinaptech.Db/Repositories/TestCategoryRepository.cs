@@ -45,7 +45,7 @@ namespace Sinaptech.Db.Repositories
 
         public TestCategory GetByName(string name)
         {
-            return db.TestCategories.Where(p => p.CategoryName == name).FirstOrDefault();
+            return db.TestCategories.FirstOrDefault(p => p.CategoryName == name);
         }
 
         public void Save()

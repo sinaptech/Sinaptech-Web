@@ -27,6 +27,8 @@ namespace Sinaptech.Db
         public DbSet<LabTest> LabTests { get; set; }
         public DbSet<LabTestPrice> LabTestPrices { get; set; }
         public DbSet<Disease> Diseases { get; set; }
+        public DbSet<TestPackage> TestPackages { get; set; }
+        public DbSet<TestPackagePrice> TestPackagePrices { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

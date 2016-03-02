@@ -71,10 +71,18 @@
     <Compile Include="Models\TestPackagePrice.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\DiseaseRepository.cs" />
+    <Compile Include="Repositories\IDiseaseRepository.cs" />
+    <Compile Include="Repositories\ITestPackagePriceRepository.cs" />
+    <Compile Include="Repositories\ILabTestPriceRepository.cs" />
     <Compile Include="Repositories\ILabTestRepository.cs" />
     <Compile Include="Repositories\ITestCategoryRepository.cs" />
+    <Compile Include="Repositories\ITestPackageRepository.cs" />
+    <Compile Include="Repositories\TestPackagePriceRepository.cs" />
+    <Compile Include="Repositories\LabTestPriceRepository.cs" />
     <Compile Include="Repositories\LabTestRepository.cs" />
     <Compile Include="Repositories\TestCategoryRepository.cs" />
+    <Compile Include="Repositories\TestPackageRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

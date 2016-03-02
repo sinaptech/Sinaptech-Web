@@ -45,11 +45,11 @@ namespace Sinaptech.Db.Repositories
 
         public LabTest GetByNameSci(string name)
         {
-            return db.LabTests.Where(p => p.NameSci == name).FirstOrDefault();
+            return db.LabTests.FirstOrDefault(p => p.NameSci == name);
         }
         public LabTest GetByNameGen(string name)
         {
-            return db.LabTests.Where(p => p.NameGen == name).FirstOrDefault();
+            return db.LabTests.FirstOrDefault(p => p.NameGen == name);
         }
 
         public void Save()
