@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="DbContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\LabTest.cs" />
+    <Compile Include="Models\LabTestPrice.cs" />
     <Compile Include="Models\TestCategory.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
