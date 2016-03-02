@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinaptech.Db", "Sinaptech.Db\Sinaptech.Db.csproj", "{FF076D7D-DC6B-41C9-9B6A-C0DB515E32F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinaptech.Logic", "Sinaptech.Logic\Sinaptech.Logic.csproj", "{3B71494B-8543-4119-A651-B51518D8DABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinaptech.MVC", "Sinaptech.MVC\Sinaptech.MVC.csproj", "{03B037C8-A9C3-49D3-95E3-7179ED3E6794}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF076D7D-DC6B-41C9-9B6A-C0DB515E32F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF076D7D-DC6B-41C9-9B6A-C0DB515E32F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF076D7D-DC6B-41C9-9B6A-C0DB515E32F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF076D7D-DC6B-41C9-9B6A-C0DB515E32F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B71494B-8543-4119-A651-B51518D8DABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B71494B-8543-4119-A651-B51518D8DABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B71494B-8543-4119-A651-B51518D8DABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B71494B-8543-4119-A651-B51518D8DABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B037C8-A9C3-49D3-95E3-7179ED3E6794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B037C8-A9C3-49D3-95E3-7179ED3E6794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B037C8-A9C3-49D3-95E3-7179ED3E6794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B037C8-A9C3-49D3-95E3-7179ED3E6794}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
