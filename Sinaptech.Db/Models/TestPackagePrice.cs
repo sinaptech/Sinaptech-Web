@@ -7,20 +7,17 @@ using System.Threading.Tasks;
 
 namespace Sinaptech.Db.Models
 {
-   public class LabTestPrice
+    public class TestPackagePrice
     {
-        public int LabTestPriceId { get; set; }
+        public int TestPackagePriceId { get; set; }
         public int Price { get; set; }
         public int PriceAfterDiscount { get; set; }
 
         public DateTime FromDateTime { get; set; }
 
-        [ForeignKey("LabTest")]
-        public int LabTestId { get; set; }
+        [ForeignKey("TestPackage")]
+        public int TestPackageId { get; set; }
 
-        public virtual LabTest LabTest { get; set; }
-
-
-
+        public virtual TestPackage TestPackage { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Sinaptech.Db.Models
         public virtual ICollection<Disease> Diseases { get; set; }
         public virtual LabTestPrice LabTestPrice { get; set; }
 
-
+       public virtual TestPackage TestPackage { get; set; }
 
     }
 }
