@@ -13,6 +13,7 @@ namespace Sinaptech.Db.Models
         public string CategoryDescription { get; set; }
 
         //ye TestCategory mitune n ta LabTest dashte bashe va ye LabTest mitune motoalegh be n ta TestCategory bashe
+        // ??? N -> N ?
         public virtual ICollection<LabTest> LabTests { get; set; }
     }
 }
