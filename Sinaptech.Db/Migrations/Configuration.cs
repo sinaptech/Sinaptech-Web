@@ -29,9 +29,16 @@
             //
             #region Add Default Test Category
 
-            var defaultTestCategory = new TestCategory() { TestCategoryId = 1, CategoryName = "عمومی" };
+            var defaultTestCategory = new TestCategory() {
+                // Moghe add kardane ye entity(record) Id nabayad vared beshe. asan record ezafe nemishe injoori.
+                //TestCategoryId = 1,
+                CategoryName = "عمومی"
+            };
             context.TestCategories.AddOrUpdate(defaultTestCategory);
-            context.SaveChanges();
+
+            //In method faghat ba dastoore update-database az tooye console package manager ejra mishe;
+            //Save Changes ro baraye Method e Seed ehtiaj nist. 
+            //context.SaveChanges(); 
 
             #endregion
         }
