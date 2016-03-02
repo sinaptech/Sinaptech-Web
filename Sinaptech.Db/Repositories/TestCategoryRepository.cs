@@ -55,7 +55,7 @@ namespace Sinaptech.Db.Repositories
 
         public void Update(TestCategory entity)
         {
-            var testcategory = db.TestCategories.Find(entity.Id);
+            var testcategory = db.TestCategories.Find(entity.TestCategoryId);
             testcategory.CategoryDescription = entity.CategoryDescription;
             testcategory.CategoryName = entity.CategoryName;
             Save();

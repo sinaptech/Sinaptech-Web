@@ -59,7 +59,7 @@ namespace Sinaptech.Db.Repositories
 
         public void Update(LabTest entity)
         {
-            var labTest = db.LabTests.Find(entity.Id);
+            var labTest = db.LabTests.Find(entity.LabTestId);
             labTest.NameGen = entity.NameGen;
             labTest.NameSci = entity.NameSci;
             labTest.TestDescription = entity.TestDescription;

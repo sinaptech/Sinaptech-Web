@@ -26,6 +26,7 @@ namespace Sinaptech.Db
         public DbSet<TestCategory> TestCategories { get; set; }
         public DbSet<LabTest> LabTests { get; set; }
         public DbSet<LabTestPrice> LabTestPrices { get; set; }
+        public DbSet<Disease> Diseases { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,8 +38,10 @@ namespace Sinaptech.Db
             modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogins");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaims");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
-            modelBuilder.Entity<LabTest>().HasMany(c => c.TestCategories).WithMany(i => i.LabTests).Map(t => t.MapLeftKey("LabTestId").MapRightKey("TestCategoryId").ToTable("LabTestTestCategory"));
+            modelBuilder.Entity<LabTest>().HasMany(c => c.TestCategories).WithMany(i => i.LabTests).Map(t => t.MapLeftKey("LabtTestId").MapRightKey("TestCategoryId").ToTable("LabTestTestCategory"));
             modelBuilder.Entity<LabTest>().HasOptional(p => p.LabTestPrice).WithRequired(p => p.LabTest);
         }
+
+        
     }
 }

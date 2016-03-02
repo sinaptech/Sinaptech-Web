@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sinaptech.Db.Models
 {
-    public class TestCategory
+   public class Disease
     {
-        public int TestCategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public string CategoryDescription { get; set; }
+        public int DiseaseId { get; set; }
+        public string NameSci { get; set; }
+        public string NameGen { get; set; }
+        public string Description { get; set; }
 
         public virtual ICollection<LabTest> LabTests { get; set; }
     }

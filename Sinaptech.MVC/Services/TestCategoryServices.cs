@@ -23,7 +23,7 @@ namespace Sinaptech.MVC.Services
             testcategory.CategoryDescription = model.Description;
             testcategory.CategoryName = model.Name;
             testcategory = _tc.AddTestCategory(testcategory);
-            var result = new ResultViewModel() { EntityId = testcategory.Id, Message = "دسته بندی " + testcategory.CategoryName + " با موفقیت اضافه شد", Status = true };
+            var result = new ResultViewModel() { EntityId = testcategory.TestCategoryId, Message = "دسته بندی " + testcategory.CategoryName + " با موفقیت اضافه شد", Status = true };
             return result;
         }
 

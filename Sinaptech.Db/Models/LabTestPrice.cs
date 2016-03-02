@@ -9,7 +9,7 @@ namespace Sinaptech.Db.Models
 {
    public class LabTestPrice
     {
-        public int Id { get; set; }
+        public int LabTestPriceId { get; set; }
         public int Price { get; set; }
         public int PriceAfterDiscount { get; set; }
 

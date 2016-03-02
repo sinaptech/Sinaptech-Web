@@ -1,5 +1,6 @@
-namespace Sinaptech.Db.Migrations
+﻿namespace Sinaptech.Db.Migrations
 {
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -26,6 +27,13 @@ namespace Sinaptech.Db.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            #region Add Default Test Category
+
+            var defaultTestCategory = new TestCategory() { TestCategoryId = 1, CategoryName = "عمومی" };
+            context.TestCategories.AddOrUpdate(defaultTestCategory);
+            context.SaveChanges();
+
+            #endregion
         }
     }
 }
