@@ -1,4 +1,6 @@
-﻿namespace Sinaptech.Db.Migrations
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+
+namespace Sinaptech.Db.Migrations
 {
     using Models;
     using System;
@@ -27,6 +29,8 @@
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+          
             #region Add Default Test Category
 
             var defaultTestCategory = new TestCategory() {
@@ -42,5 +46,6 @@
 
             #endregion
         }
+      
     }
 }

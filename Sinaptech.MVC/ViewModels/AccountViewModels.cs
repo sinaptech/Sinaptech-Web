@@ -64,21 +64,31 @@ namespace Sinaptech.MVC.ViewModels
 
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "پست الکترونیکی بایستی وارد شود")]
+        [EmailAddress(ErrorMessage = "{0} وارد شده معتبر نیست")]
+        [Display(Name = "پست الکترونیکی")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage = "کلمه عبور بایستی وارد شود")]
+        [StringLength(100, ErrorMessage = "{0} وارد شده باید حداقل {2} کاراکتر باشد.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        //Mehdi age proje ro run koni beri vase register kardane karbar va password ro bezani 123456 ebhet peyghame englisi mide ino
+        //chetori mishe farsish kard?
+        [Display(Name = "کلمه عبور")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "تکرار کلمه عبور")]
+        [Compare("Password", ErrorMessage = "کلمه عبور و تکرار آن یکسان نیست.")]
         public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "نام بایستی وارد شود")]
+        [Display(Name = "نام")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "نام خانوادگی بایستی وارد شود")]
+        [Display(Name = "نام خانوادگی")]
+        public string LastName { get; set; }
     }
 
     public class ResetPasswordViewModel
