@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace Sinaptech.Db.Models
 {
@@ -13,6 +14,7 @@ namespace Sinaptech.Db.Models
         public ApplicationUser()
         {
             CreateDate = DateTime.Now;
+           
         }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -22,8 +24,9 @@ namespace Sinaptech.Db.Models
             return userIdentity;
         }
 
+      
         public DateTime CreateDate { get; set; }
-        public string Name { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
     }
 }
