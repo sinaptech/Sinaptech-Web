@@ -13,6 +13,6 @@ namespace Sinaptech.Db.Models
         public string NameGen { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<LabTest> LabTests { get; set; }
+     //   public virtual ICollection<LabTest> LabTests { get; set; }
     }
 }
