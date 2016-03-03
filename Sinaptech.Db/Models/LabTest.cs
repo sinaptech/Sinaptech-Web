@@ -16,8 +16,8 @@ namespace Sinaptech.Db.Models
         public string NameGen { get; set; }
         public string TestDescription { get; set; }
 
-     //   public virtual ICollection<TestCategory> TestCategories { get; set; }
-    //    public virtual ICollection<Disease> Diseases { get; set; }
+       public virtual ICollection<TestCategory> TestCategories { get; set; }
+       public virtual ICollection<Disease> Diseases { get; set; }
     [ForeignKey("LabTestPrice")]
        public int LabTestPriceId { get; set; }
        public virtual LabTestPrice LabTestPrice { get; set; }

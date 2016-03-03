@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Sinaptech.Db.Models;
+using Sinaptech.Db.Models.Mappings;
 
 namespace Sinaptech.Db
 {
@@ -44,6 +45,13 @@ namespace Sinaptech.Db
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
            // modelBuilder.Entity<LabTest>().HasMany(c => c.TestCategories).WithMany(i => i.LabTests).Map(t => t.MapLeftKey("LabtTestId").MapRightKey("TestCategoryId").ToTable("LabTestTestCategory"));
             modelBuilder.Entity<LabTest>().HasOptional(s => s.LabTestPrice).WithRequired(d => d.LabTest);
+
+
+            #region Mappings
+
+            modelBuilder.Configurations.Add(new DiseaseMap());
+
+            #endregion
         }
 
         
