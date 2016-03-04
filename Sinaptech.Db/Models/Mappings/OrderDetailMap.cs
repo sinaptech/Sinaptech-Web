@@ -17,7 +17,7 @@ namespace Sinaptech.Db.Models.Mappings
           
 
             HasOptional(orderdetails => orderdetails.LabTest).WithMany(labtest => labtest.OrderDetailses);
-            HasOptional(orderdetails => orderdetails.TestPackage).WithMany(testpackage => testpackage.OrderDetailses);
+            HasOptional(orderdetails => orderdetails.TestPackage).WithMany(testpackage => testpackage.OrderDetails);
            HasRequired(orderdetail => orderdetail.Order).WithMany(order => order.OrderDetails);
        }
     }

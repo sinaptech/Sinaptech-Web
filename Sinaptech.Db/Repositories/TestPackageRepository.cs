@@ -64,7 +64,7 @@ namespace Sinaptech.Db.Repositories
             testPackage.NameGen = entity.NameGen;
             testPackage.NameSci = entity.NameSci;
             testPackage.Description = entity.Description;
-            testPackage.TestPackagePrice = entity.TestPackagePrice;
+            testPackage.TestPackagePrices = entity.TestPackagePrices;
             testPackage.LabTests = entity.LabTests;
             Save();
         }

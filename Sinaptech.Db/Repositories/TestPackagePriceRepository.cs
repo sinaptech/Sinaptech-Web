@@ -38,7 +38,7 @@ namespace Sinaptech.Db.Repositories
 
         public TestPackagePrice Get(int id)
         {
-            return db.TestPackagePrices.FirstOrDefault(s => s.TestPackageId == id);
+            return db.TestPackagePrices.FirstOrDefault(s => s.TestPackagePriceId == id);
         }
 
         public TestPackagePrice GetByPriceAfterDiscount(int priceAftrDiscount)
@@ -68,8 +68,7 @@ namespace Sinaptech.Db.Repositories
             testPackagePrice.FromDateTime = entity.FromDateTime;
             testPackagePrice.PriceAfterDiscount = entity.PriceAfterDiscount;
             testPackagePrice.TestPackage = entity.TestPackage;
-            testPackagePrice.TestPackageId = entity.TestPackageId;
-           
+          
             Save();
         }
     }

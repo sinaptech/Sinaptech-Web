@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace Sinaptech.Db.Models.Mappings
 {
-    public class LabTestMap : EntityTypeConfiguration<LabTest>
+    public class TestPackageMap : EntityTypeConfiguration<TestPackage>
     {
-        public LabTestMap()
+        public TestPackageMap()
         {
-            HasKey(d => d.LabTestId);
+            HasKey(d => d.TestPackageId);
             Property(d => d.NameGen).HasMaxLength(100).IsRequired().HasColumnType("nvarchar");
             Property(d => d.NameSci).HasMaxLength(100).IsOptional().HasColumnType("nvarchar");
-            Property(d => d.TestDescription).IsOptional().IsMaxLength();
+            Property(d => d.Description).IsOptional().IsMaxLength();
             Property(d => d.CurrentPrice).IsOptional();
             Property(d => d.CurrentPriceAfterDiscount).IsOptional();
 
-            HasMany(labtest => labtest.Diseases).WithMany(disease => disease.LabTests);
-          
-            HasMany(labtest => labtest.LabTestPrices).WithRequired(labtestprice => labtestprice.LabTest);
-            HasMany(labtest => labtest.TestCategories).WithMany(testcategory => testcategory.LabTests);
+            HasMany(testpackage => testpackage.LabTests).WithMany(labtest => labtest.TestPackages);
+           
+            HasMany(testpackage => testpackage.TestPackagePrices).WithRequired(testpackageprice => testpackageprice.TestPackage);
+
         }
 
     }

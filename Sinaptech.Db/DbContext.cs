@@ -54,6 +54,10 @@ namespace Sinaptech.Db
             modelBuilder.Configurations.Add(new LabTestPriceMap());
             modelBuilder.Configurations.Add(new OrderDetailMap());
             modelBuilder.Configurations.Add(new OrderMap());
+            modelBuilder.Configurations.Add(new TestCategoryMap());
+       modelBuilder.Configurations.Add(new TestPackageMap());
+            modelBuilder.Configurations.Add(new TestPackagePriceMap());
+
             #endregion
         }
 

@@ -78,6 +78,9 @@
     <Compile Include="Models\Disease.cs" />
     <Compile Include="Models\LabTest.cs" />
     <Compile Include="Models\LabTestPrice.cs" />
+    <Compile Include="Models\Mappings\TestPackagePriceMap.cs" />
+    <Compile Include="Models\Mappings\TestPackageMap.cs" />
+    <Compile Include="Models\Mappings\TestCategoryMap.cs" />
     <Compile Include="Models\Mappings\OrderDetailMap.cs" />
     <Compile Include="Models\Mappings\OrderMap.cs" />
     <Compile Include="Models\Mappings\LabTestPriceMap.cs" />

@@ -13,13 +13,15 @@ namespace Sinaptech.Db.Models
        public string NameSci { get; set; }
        public string NameGen { get; set; }
        public string Description { get; set; }
+        public int? CurrentPrice { get; set; }
+        public int? CurrentPriceAfterDiscount { get; set; }
 
         // Ye TestPackagePrice hatman bayad TestPackage dashte bashe va faghatm yedune dashtebashe va ye TestPackage mitune Price nadashte bashe ya yedune dashte bashe
-        public virtual TestPackagePrice TestPackagePrice { get; set; }
+        public virtual ICollection<TestPackagePrice> TestPackagePrices { get; set; }
 
         //ye TestPackage mitune n ta LabTest dashte bashe va ye LabTest mitune ozve n ta TestPackage bashe
-       public virtual ICollection<LabTest> LabTests { get; set; }
+        public virtual ICollection<LabTest> LabTests { get; set; }
 
-        public virtual ICollection<OrderDetail> OrderDetailses { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

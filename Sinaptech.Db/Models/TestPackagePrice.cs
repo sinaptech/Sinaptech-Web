@@ -11,15 +11,13 @@ namespace Sinaptech.Db.Models
     {
         public int TestPackagePriceId { get; set; }
         public int Price { get; set; }
-        public int PriceAfterDiscount { get; set; }
+        public int? PriceAfterDiscount { get; set; }
 
         public DateTime FromDateTime { get; set; }
 
 
 // Ye TestPackagePrice hatman bayad TestPackage dashte bashe va faghatm yedune dashtebashe va ye TestPackage mitune Price nadashte bashe ya yedune dashte bashe
-        [ForeignKey("TestPackage")]
-        public int TestPackageId { get; set; }
-
+     
         public virtual TestPackage TestPackage { get; set; }
     }
 }
