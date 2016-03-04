@@ -16,6 +16,8 @@ namespace Sinaptech.Db.Models.Mappings
            Property(d => d.NameGen).HasMaxLength(100).IsRequired().HasColumnType("nvarchar");
             Property(d => d.NameSci).HasMaxLength(100).IsOptional().HasColumnType("nvarchar");
            Property(d => d.Description).IsOptional().IsMaxLength();
+
+           HasMany(disease => disease.LabTests).WithMany(labtest => labtest.Diseases);
        }
     }
 }

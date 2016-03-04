@@ -68,7 +68,7 @@ namespace Sinaptech.Db.Repositories
             labTestPrice.FromDateTime = entity.FromDateTime;
             labTestPrice.PriceAfterDiscount = entity.PriceAfterDiscount;
             labTestPrice.LabTest = entity.LabTest;
-            labTestPrice.LabTestId = entity.LabTestId;
+            
             Save();
         }
     }

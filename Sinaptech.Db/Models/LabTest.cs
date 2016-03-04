@@ -12,6 +12,8 @@ namespace Sinaptech.Db.Models
         public string NameSci { get; set; }
         public string NameGen { get; set; }
         public string TestDescription { get; set; }
+        public int? CurrentPrice { get; set; }
+        public int? CurrentPriceAfterDiscount { get; set; }
 
         //ye TestCategory mitune n ta LabTest dashte bashe va ye LabTest mitune motoalegh be n ta TestCategory bashe
         public virtual ICollection<TestCategory> TestCategories { get; set; }
@@ -20,7 +22,9 @@ namespace Sinaptech.Db.Models
         public virtual ICollection<Disease> Diseases { get; set; }
 
         //ye LabTestPrice bayad hatman LabTest dashte bashe va yedune ham bashe vali ye LabTest mitune yeki ya hichi LabTestPrice dashte bashe
-        public virtual LabTestPrice LabTestPrice { get; set; }
+        public virtual ICollection<LabTestPrice> LabTestPrices { get; set; }
+
+        public virtual ICollection<OrderDetail> OrderDetailses { get; set; }
 
         //ye TestPackage mitune n ta LabTest dashte bashe va ye LabTest mitune ozve n ta TestPackage bashe
         public virtual TestPackage TestPackage { get; set; }

@@ -24,11 +24,13 @@ namespace Sinaptech.Db
             return new ApplicationDbContext();
         }
 
-        public DbSet<TestCategory> TestCategories { get; set; }
+        public DbSet<Disease> Diseases { get; set; }
         public DbSet<LabTest> LabTests { get; set; }
         public DbSet<LabTestPrice> LabTestPrices { get; set; }
-        public DbSet<Disease> Diseases { get; set; }
-        public DbSet<TestPackage> TestPackages { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<TestCategory> TestCategories { get; set; }
+      public DbSet<TestPackage> TestPackages { get; set; }
         public DbSet<TestPackagePrice> TestPackagePrices { get; set; }
 
         /// <summary>
@@ -45,14 +47,13 @@ namespace Sinaptech.Db
             modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogins");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaims");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
-           // modelBuilder.Entity<LabTest>().HasMany(c => c.TestCategories).WithMany(i => i.LabTests).Map(t => t.MapLeftKey("LabtTestId").MapRightKey("TestCategoryId").ToTable("LabTestTestCategory"));
-            modelBuilder.Entity<LabTest>().HasOptional(s => s.LabTestPrice).WithRequired(d => d.LabTest);
-
-
+       
             #region Mappings
-
             modelBuilder.Configurations.Add(new DiseaseMap());
-
+            modelBuilder.Configurations.Add(new LabTestMap());
+            modelBuilder.Configurations.Add(new LabTestPriceMap());
+            modelBuilder.Configurations.Add(new OrderDetailMap());
+            modelBuilder.Configurations.Add(new OrderMap());
             #endregion
         }
 

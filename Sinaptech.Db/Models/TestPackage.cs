@@ -19,5 +19,7 @@ namespace Sinaptech.Db.Models
 
         //ye TestPackage mitune n ta LabTest dashte bashe va ye LabTest mitune ozve n ta TestPackage bashe
        public virtual ICollection<LabTest> LabTests { get; set; }
+
+        public virtual ICollection<OrderDetail> OrderDetailses { get; set; }
     }
 }

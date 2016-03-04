@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Sinaptech.Db.Models
 {
-   public class OrderDetails
+   public class OrderDetail
     {
        
-       public int OrderID { get; set; }
-       public int PackageId { get; set; }
-       public int TestId { get; set; }
+       public int OrderDetailId { get; set; }
+    
        public virtual Order Order { get; set; }
        public virtual TestPackage   TestPackage { get; set; }
        public virtual LabTest   LabTest { get; set; }
