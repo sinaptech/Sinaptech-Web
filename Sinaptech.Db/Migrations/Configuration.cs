@@ -12,7 +12,7 @@ namespace Sinaptech.Db.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Sinaptech.Db.ApplicationDbContext context)
