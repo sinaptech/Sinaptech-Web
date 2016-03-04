@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace Sinaptech.Db.Models
@@ -28,5 +29,7 @@ namespace Sinaptech.Db.Models
         public DateTime CreateDate { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
