@@ -62,22 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext.cs" />
-    <Compile Include="Migrations\201603021341085_ss.cs" />
-    <Compile Include="Migrations\201603021341085_ss.Designer.cs">
-      <DependentUpon>201603021341085_ss.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603021347305_ss2.cs" />
-    <Compile Include="Migrations\201603021347305_ss2.Designer.cs">
-      <DependentUpon>201603021347305_ss2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603021350361_ss3.cs" />
-    <Compile Include="Migrations\201603021350361_ss3.Designer.cs">
-      <DependentUpon>201603021350361_ss3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603042131192_relationc.cs" />
-    <Compile Include="Migrations\201603042131192_relationc.Designer.cs">
-      <DependentUpon>201603042131192_relationc.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Disease.cs" />
     <Compile Include="Models\LabTest.cs" />
@@ -113,20 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603021341085_ss.resx">
-      <DependentUpon>201603021341085_ss.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603021347305_ss2.resx">
-      <DependentUpon>201603021347305_ss2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603021350361_ss3.resx">
-      <DependentUpon>201603021350361_ss3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603042131192_relationc.resx">
-      <DependentUpon>201603042131192_relationc.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
