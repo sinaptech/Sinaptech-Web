@@ -34,14 +34,18 @@ namespace Sinaptech.MVC.Controllers.API
         // POST: api/Disease
         public void Post(AddDiseaseViewModel model)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return;
+                return _diseaseServices.AddDisease(model, User.Identity.GetUserId());
             }
-           ResultViewModel result= _diseaseServices.AddDisease(model, User.Identity.GetUserId());
-          
-                Ok();
-           
+            else
+            {
+                var errors = ModelState.Select(x => x.Value.Errors)
+                           .Where(y => y.Count > 0)
+                           .ToList();
+                var error = errors.FirstOrDefault().Select(p => p.Exception).FirstOrDefault();
+                return new ResultViewModel { Message = error.Message, Status = false};
+            }
         }
 
         // PUT: api/Disease/5
