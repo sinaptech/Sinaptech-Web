@@ -20,6 +20,14 @@ namespace Sinaptech.MVC.Controllers
             return View();
         }
 
+
+        [HttpGet]
+        public ActionResult TestCategories()
+        {
+            
+            return View(_testCategoryService.GetAllTestCategories());
+        }
+
         [HttpGet]
         public ActionResult AddTestCategory()
         {

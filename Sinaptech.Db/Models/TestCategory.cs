@@ -15,5 +15,6 @@ namespace Sinaptech.Db.Models
         //ye TestCategory mitune n ta LabTest dashte bashe va ye LabTest mitune motoalegh be n ta TestCategory bashe
         // ??? N -> N ?
         public virtual ICollection<LabTest> LabTests { get; set; }
+        public virtual string CreatorId { get; set; }
     }
 }

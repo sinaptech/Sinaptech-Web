@@ -26,5 +26,10 @@ namespace Sinaptech.MVC.Controllers
 
             return View();
         }
+
+        public ActionResult Disease()
+        {
+            return View();
+        }
     }
 }

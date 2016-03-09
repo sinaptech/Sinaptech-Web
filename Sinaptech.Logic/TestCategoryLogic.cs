@@ -20,5 +20,10 @@ namespace Sinaptech.Logic
         public TestCategory AddTestCategory(TestCategory testcategory) {
             return _testCategories.Add(testcategory);
         }
+
+        public IEnumerable<TestCategory> GetAllTestCategories()
+        {
+            return _testCategories.GetAll();
+        } 
     }
 }

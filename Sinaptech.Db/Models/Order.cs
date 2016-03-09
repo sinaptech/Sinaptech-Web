@@ -16,5 +16,6 @@ namespace Sinaptech.Db.Models
        public string Gateway { get; set; }
        public string Status { get; set; }
        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+       
     }
 }

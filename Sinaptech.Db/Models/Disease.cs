@@ -16,5 +16,8 @@ namespace Sinaptech.Db.Models
 
         //ye Disease mitune hichi ya n ta LabTest dashte bashe va ye LabTest ham mitune be hichi ya n ta Disease mortabet bashe
         public virtual ICollection<LabTest> LabTests { get; set; }
+
+        public virtual string CreatorId { get; set; }
+
     }
 }

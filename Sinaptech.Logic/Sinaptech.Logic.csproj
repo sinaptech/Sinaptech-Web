@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiseaseLogic.cs" />
     <Compile Include="LabTestLogic.cs" />
     <Compile Include="TestCategoryLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

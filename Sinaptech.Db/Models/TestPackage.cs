@@ -23,5 +23,6 @@ namespace Sinaptech.Db.Models
         public virtual ICollection<LabTest> LabTests { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual string CreatorId { get; set; }
     }
 }

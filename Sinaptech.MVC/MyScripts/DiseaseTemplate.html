@@ -1,0 +1,40 @@
+﻿<form class="form-horizontal" role="form">
+    <fieldset>
+        <legend>Disease Info</legend>
+        <div class="form-group">
+
+            <label for="diseaseId" class="col-sm-3 control-label">Disease Id</label>
+            <div class="col-sm-9">
+                <input type="text" id="diseaseId" name="diseaseId"
+                       ng-model="DiseaseId" class="form-control" readonly="readonly" />
+            </div>
+         
+            <label for="genName" class="col-sm-3 control-label">General Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="genName" name="genName"
+                       ng-model="NameGen" class="form-control" />
+            </div>
+            <label for="sciName" class="col-sm-3 control-label">Scientific Name</label>
+            <div class="col-sm-9">
+                <input type="text" id="sciName" name="sciName"
+                       ng-model="NameSci" class="form-control" />
+            </div>
+            <label for="description" class="col-sm-3 control-label">Desription</label>
+            <div class="col-sm-9">
+                <input type="text" id="description" name="description"
+                       ng-model="Desription" class="form-control" />
+            </div>
+
+        
+
+        </div>
+    </fieldset>
+  
+    <div class="col-sm-offset-3 col-sm-9">
+        <input type="button" class="btn btn-default" value="Cancel"
+               ng-click="cancelForm()" />
+        <input type="button" class="btn btn-primary" value="Submit"
+               ng-click="submitForm()" />
+    </div>
+
+</form>

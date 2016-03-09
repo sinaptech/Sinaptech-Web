@@ -11,10 +11,10 @@ namespace Sinaptech.MVC.Services
 {
     public class TestCategoryServices
     {
-        private TestCategoryLogic _tc;
+        private TestCategoryLogic _testCategoryLogic;
         public TestCategoryServices()
         {
-            _tc = new TestCategoryLogic();
+            _testCategoryLogic = new TestCategoryLogic();
         }
 
         public ResultViewModel AddTestCategory(AddTestCategoryViewModel model)
@@ -22,10 +22,15 @@ namespace Sinaptech.MVC.Services
             var testcategory = new TestCategory();
             testcategory.CategoryDescription = model.Description;
             testcategory.CategoryName = model.Name;
-            testcategory = _tc.AddTestCategory(testcategory);
+            testcategory = _testCategoryLogic.AddTestCategory(testcategory);
             var result = new ResultViewModel() { EntityId = testcategory.TestCategoryId, Message = "دسته بندی " + testcategory.CategoryName + " با موفقیت اضافه شد", Status = true };
             return result;
         }
+
+        public IEnumerable<TestCategory> GetAllTestCategories()
+        {
+            return _testCategoryLogic.GetAllTestCategories();
+        } 
 
         #region Helpers
 
