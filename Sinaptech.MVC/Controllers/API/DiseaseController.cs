@@ -32,7 +32,7 @@ namespace Sinaptech.MVC.Controllers.API
         }
 
         // POST: api/Disease
-        public void Post(AddDiseaseViewModel model)
+        public ResultViewModel Post(AddDiseaseViewModel model)
         {
             if (ModelState.IsValid)
             {
