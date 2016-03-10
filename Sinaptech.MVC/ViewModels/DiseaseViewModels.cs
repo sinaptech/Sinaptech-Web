@@ -6,6 +6,13 @@ using System.Web;
 
 namespace Sinaptech.MVC.ViewModels
 {
+    public class DiseaseViewModel
+    {
+        public int DiseaseId { get; set; }
+        public string NameGeneral { get; set; }
+        public string NameScientific { get; set; }
+        public string Description { get; set; }
+    }
     public class AddDiseaseViewModel
     {
         [Required]
@@ -18,7 +25,7 @@ namespace Sinaptech.MVC.ViewModels
         public string NameScientific { get; set; }
 
         [Display(Name = "توضیحات (کدهای اچ تی ام ال مجاز است)")]
-   [DataType(DataType.Html)]
+        [DataType(DataType.Html)]
         public string Description { get; set; }
 
      
