@@ -16,19 +16,19 @@ namespace Sinaptech.MVC.Controllers.API
 
         public DiseaseController()
         {
-            _diseaseServices=new DiseaseServices();
+            _diseaseServices = new DiseaseServices();
         }
 
         // GET: api/Disease
-        public IEnumerable<string> Get()
+        public List<DiseaseViewModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _diseaseServices.GetAllDiseases();
         }
 
         // GET: api/Disease/5
-        public string Get(int id)
+        public DiseaseViewModel Get(int id)
         {
-            return "value";
+            return _diseaseServices.GetById(id);
         }
 
         // POST: api/Disease
@@ -44,7 +44,7 @@ namespace Sinaptech.MVC.Controllers.API
                            .Where(y => y.Count > 0)
                            .ToList();
                 var error = errors.FirstOrDefault().Select(p => p.Exception).FirstOrDefault();
-                return new ResultViewModel { Message = error.Message, Status = false};
+                return new ResultViewModel { Message = error.Message, Status = false };
             }
         }
 
