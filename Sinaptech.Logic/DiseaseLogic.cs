@@ -22,5 +22,14 @@ namespace Sinaptech.Logic
            return _diseaseRepository.Add(disease);
        }
 
-   }
+        public List<Disease> GetAll()
+        {
+            return _diseaseRepository.GetAll().ToList();
+        }
+
+        public Disease GetById(int id)
+        {
+            return _diseaseRepository.Get(id);
+        }
+    }
 }
