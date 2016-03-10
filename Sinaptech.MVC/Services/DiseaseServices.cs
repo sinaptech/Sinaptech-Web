@@ -17,13 +17,13 @@ namespace Sinaptech.MVC.Services
             _diseaseLogic = new DiseaseLogic();
         }
 
-        public ResultViewModel AddDisease(AddDiseaseViewModel  model,string creatorId)
+        public ResultViewModel AddDisease(AddDiseaseViewModel model, string creatorId)
         {
             var disease = new Disease()
             {
                 NameGen = model.NameGeneral,
                 NameSci = model.NameScientific,
-                CreatorId =creatorId,
+                CreatorId = creatorId,
                 Description = model.Description
             };
             disease = _diseaseLogic.AddDisease(disease);
@@ -31,10 +31,40 @@ namespace Sinaptech.MVC.Services
             return result;
 
         }
-    
 
-    #region Helpers
+        public DiseaseViewModel GetById(int id)
+        {
+            var disease = _diseaseLogic.GetById(id);
+            return DiseaseToViewModel(disease);
+        }
 
+        public List<DiseaseViewModel> GetAllDiseases()
+        {
+            var diseases = _diseaseLogic.GetAll();
+            return DiseaseListToViewModel(diseases);
+        }
+
+
+        #region Helpers
+        private DiseaseViewModel DiseaseToViewModel(Disease disease)
+        {
+            return new DiseaseViewModel()
+            {
+                Description = disease.Description,
+                DiseaseId = disease.DiseaseId,
+                NameGeneral = disease.NameGen,
+                NameScientific = disease.NameSci
+            };
+        }
+        private List<DiseaseViewModel> DiseaseListToViewModel(List<Disease> diseases)
+        {
+            var model = new List<DiseaseViewModel>();
+            foreach (var item in diseases)
+            {
+                model.Add(DiseaseToViewModel(item));
+            }
+            return model;
+        }
         #endregion
     }
 }
